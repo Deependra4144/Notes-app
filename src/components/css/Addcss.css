@@ -1,0 +1,27 @@
+input {
+    width: 100%;
+    /* padding-left: 1%; */
+    padding: .5%;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid;
+    outline: none;
+    display: block;
+    /* height: 72%; */
+    font-size: 13px;
+}
+
+label {
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+    top: 5px;
+    background-color: white;
+}
+
+
+select {
+    display: block;
+    width: 100%;
+    outline: none;
+}
