@@ -1,24 +1,29 @@
 import { RiDeleteBin3Line } from "react-icons/ri";
 import TableData from "./TableData";
+
 function AllNotes() {
     let arr = JSON.parse(localStorage.getItem('Notes'));
-    return (
-        <>
-            <h1 className="text-center">All Notes</h1>
-            <div className="d-flex justify-content-center align-center gap-3">
 
+    return (
+        <div className="w-full">
+            <h1 className="text-center text-2xl font-bold mb-4">All Notes</h1>
+            <div className="flex justify-center items-center gap-3">
                 {arr.length > 0 ? arr.map((v, i) => {
                     return (
-                        <div className="shadow p-3" key={i}>
-                            <h5>{v.task}</h5>
-                            <p>{v.task}</p>
-                            <button><RiDeleteBin3Line /></button>
+                        <div className="shadow-md rounded-xl p-3 hover:shadow-lg transition-shadow duration-200" key={i}>
+                            <h5 className="text-lg font-medium">{v.task}</h5>
+                            <p className="text-gray-600 mt-1">{v.task}</p>
+                            <button className="mt-2 p-2 text-gray-600 hover:text-red-600 rounded-full hover:bg-gray-100">
+                                <RiDeleteBin3Line className="text-xl" />
+                            </button>
                         </div>
                     )
-                }) : <p className="text-warning">Koi Note Nhi hai</p>}
+                }) : <p className="text-yellow-500">Koi Note Nhi hai</p>}
             </div>
-            <TableData />
-        </>
+            <div className="mt-4">
+                <TableData />
+            </div>
+        </div>
     )
 }
 
