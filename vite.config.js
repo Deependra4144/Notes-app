@@ -8,7 +8,7 @@ export default defineConfig({
     host: true,   // Enables Vite to listen on all network interfaces
     port: 5174,   // Optional: specify a custom port if needed
   },
-  base: '/Notes-app'
+  base: './'
 });
 // export default defineConfig({
 //   plugins: [react()],
